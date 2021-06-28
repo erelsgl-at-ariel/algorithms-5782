@@ -11,9 +11,9 @@
 בקורס נציג בכל שבוע מספר בעיות של חלוקת משאבים, נגדיר את העקרונות הצריכים להתקיים כדי שאנשים ישתפו פעולה, ונציג אלגוריתמים הפותרים את הבעיה תוך התחשבות בעקרונות אלה. לפרטים ראו:
 
 * [סילבוס](syllabus.pdf)
-* [בחינות משנים קודמות](https://github.com/erelsgl-at-ariel/algorithms-course/)
 * [כללי חישוב הציון בקורס](grade-rules.md)
 * [תקנון היושר של המחלקה](https://www.ariel.ac.il/wp/cs/wp-content/uploads/sites/88/2020/08/Guidelines-for-Academic-Integrity.pdf)
+* [בחינות משנים קודמות](https://github.com/erelsgl-at-ariel/algorithms-course/)
 
 
 </div>
