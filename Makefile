@@ -14,7 +14,7 @@ TARGETS_XSLX=$(subst .ods,.xlsx,$(SOURCES_ODS))
 
 all: $(TARGETS_ODP) $(TARGETS_ODT) $(TARGETS_DOC) $(TARGETS_XSLX)
 	#
-	git commit -m "update pdf and xslx files"
+	git commit -am "update pdf files"
 	git push
 	echo Done!
 	sleep 86400
@@ -22,26 +22,26 @@ all: $(TARGETS_ODP) $(TARGETS_ODT) $(TARGETS_DOC) $(TARGETS_XSLX)
 %.pdf: %.odt
 	#
 	libreoffice --headless --convert-to pdf $< --outdir $(@D)
-	git add $@
-	git add $<
+	-git add $@
+	-git add $<
 	
 %.pdf: %.doc*
 	#
 	libreoffice --headless --convert-to pdf $< --outdir $(@D)
-	git add $@
-	git add $<
+	-git add $@
+	-git add $<
 
 %.pdf: %.odp
 	#
 	libreoffice --headless --convert-to pdf $< --outdir $(@D)
-	git add $@
-	git add $<
+	-git add $@
+	-git add $<
 
 %.xlsx: %.ods
 	#
 	libreoffice --headless --convert-to xlsx $< --outdir $(@D)
-	git add $@
-	git add $<
+	-git add $@
+	-git add $<
 
 clean:
 	rm -f *.pdf
