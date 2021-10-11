@@ -11,8 +11,7 @@ x = cvxpy.Variable()
 y = cvxpy.Variable()
 
 # Build two constraints.
-constraints = [x + y == 1,
-               x - y >= 1]
+constraints = [x + y == 1]
 
 # Build an objective function.
 obj = cvxpy.Minimize((x - y)**2)
