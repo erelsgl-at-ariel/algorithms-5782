@@ -17,8 +17,8 @@ print("70 1 29")
 
 x, y, z = cvxpy.Variable(3)   # fractions of the three regions given to Ami
 
-utility_ami = x*100 + y*19 + z*1
-utility_tami = (1-x)*70 + (1-y)*1 + (1-z)*29 
+utility_ami = x*80 + y*19 + z*1
+utility_tami = (1-x)*60 + (1-y)*1 + (1-z)*39 
 
 print("\nUtilitarian division - maximum sum of utilities:")
 
@@ -40,9 +40,9 @@ prob = cvxpy.Problem(
 prob.solve()
 print("status:", prob.status)
 print("optimal value", prob.value)
-print("optimal x", x.value)
-print("value of Ami", 81*x.value+19)
-print("value of Tami", 80*(1-x.value)+20)
+print("Fractions given to Ami: ", x.value, y.value, z.value)
+print("Utility of Ami", utility_ami.value)
+print("Utility of Tami", utility_tami.value)
 
 
 print("\nEgalitarian division")
