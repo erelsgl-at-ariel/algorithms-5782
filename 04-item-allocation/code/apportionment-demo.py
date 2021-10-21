@@ -12,6 +12,7 @@ votes = [40, 135, 325]
 seats = 5
 app.compute("hamilton", votes, seats, parties, verbose=True)
 app.compute("jefferson", votes, seats, parties, verbose=True)
+app.compute("webster", votes, seats, parties, verbose=True)
 
 parties = ['A', 'B']
 votes = [40, 135]
@@ -25,12 +26,6 @@ seats = 4
 app.compute("hamilton", votes, seats, parties, verbose=True)
 app.compute("jefferson", votes, seats, parties, verbose=True)
 
-
-parties = ['A', 'B', 'C']
-votes = [40, 135, 325]
-seats = 5
-app.compute("hamilton", votes, seats, parties, verbose=True)
-app.compute("jefferson", votes, seats, parties, verbose=True)
 
 parties = ['A', 'B']
 votes = [160, 340]
