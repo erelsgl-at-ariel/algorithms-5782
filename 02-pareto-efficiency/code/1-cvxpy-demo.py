@@ -23,3 +23,12 @@ prob.solve()  # Returns the optimal value.
 print("status:", prob.status)
 print("optimal value", prob.value)
 print("optimal var", x.value, y.value)
+
+
+# Form and solve an infeasible problem.
+prob = cvxpy.Problem(obj, [x + y == 1, x+y >= 2])
+prob.solve()  # Returns the optimal value.
+
+print("\nstatus:", prob.status)
+print("optimal value", prob.value)
+print("optimal var", x.value, y.value)
