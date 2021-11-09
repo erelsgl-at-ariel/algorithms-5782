@@ -14,8 +14,8 @@ TARGETS_XSLX=$(subst .ods,.xlsx,$(SOURCES_ODS))
 
 all: $(TARGETS_ODP) $(TARGETS_ODT) $(TARGETS_DOC) $(TARGETS_XSLX)
 	#
-	git commit -am "update pdf files"
-	git push
+	-git commit -am "update pdf files"
+	-git push
 	echo Done!
 	sleep 86400
 
