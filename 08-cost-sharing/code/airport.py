@@ -43,6 +43,7 @@ def shapley_values_inefficient(map_player_to_cost:dict):
 		if len(subset)>0
 	}
 	map_subset_to_cost[""] = 0
+	# print(map_subset_to_cost)
 	return shapley.values(all_players, map_subset_to_cost)
 
 
