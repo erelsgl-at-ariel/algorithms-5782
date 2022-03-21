@@ -37,9 +37,10 @@ for player in range(len(utilities)):
     print(f"   Checking the max utility of {player}:")
     prob = cvxpy.Problem(
         cvxpy.Maximize(utilities[player]),
-        constraints =fixed_constraints + [u >= 3 for u in utilities])
+        constraints = fixed_constraints + [u >= 3 for u in utilities])
     prob.solve()
     print("   optimal value: ", prob.value)
+    print(f"   iron: {x.value.round(2)},\n oil: {y.value.round(2)},\n wood: {z.value.round(2)}")
 
 print("\n2. Egalitarian division with saturated player")
 
